@@ -1,6 +1,16 @@
-<div>This is App component</div>
-<button type="button" (click)="navigatetoDemo()">Demo</button>
-<router-outlet></router-outlet>
-<app-demo></app-demo>
-
-
+<div class="container border" style="min-height: 100vh;">
+    <h2 class="row border p-3">This is my first angular application</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link " [ngClass]="isActive('demo')" href="/demo">Demo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [ngClass]="isActive('binding')" href="/binding">Binding</a>
+        </li>
+       
+      </ul>
+      <div class="p-3">
+        <router-outlet></router-outlet>
+      </div>
+    
+</div>

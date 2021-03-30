@@ -1,0 +1,52 @@
+<div>
+    <h3>This is Binding Component</h3>
+    <hr>
+    <h4>In this component, will show examples of different data bindings</h4>
+    <br>
+    <h5>Interpolation syntax</h5>
+    <hr>
+    <p>The Angular uses the <code>	&#x007B;&#x007B; templateExpression	</code><code> &#x007D;&#x007D;</code> (double
+        curly braces) in the template to denote the interpolation. The syntax is as shown below</p>
+    <code>&lt;p&gt; Welcome <code>	&#x007B;&#x007B; firstName + ' ' + lastName	</code><code> &#x007D;&#x007D;</code>
+    &lt;/p&gt;</code>
+    <p class="my-0">Welcome {{firstName + ' ' +lastName}}</p>
+    or <br>
+    <code>&lt;p&gt; Welcome <code>	&#x007B;&#x007B; firstName </code><code> &#x007D;&#x007D;</code>
+    <code>	&#x007B;&#x007B; lastName </code><code> &#x007D;&#x007D;</code> &lt;/p&gt;</code>
+    <p>Welcome {{firstName}} {{lastName}}</p>
+    <h5>Property Binding</h5>
+    <hr>
+    <p class="my-0">The Property Binding uses the following Syntax</p>
+    <span><code>[binding-target]=”binding-source”</code></span><br>
+    <div>Example: <br>
+        <code>&lt;button class="btn btn-secondary" [disabled]="isDisabled">I am disabled&lt;/button&gt;</code>
+    </div>
+    <button class="btn btn-secondary" [disabled]="isDisabled">I am disabled</button><br><br>
+    <h5>Event Binding</h5>
+    <hr>
+    <p class="my-0">The Angular event binding consists of two parts</p>
+    <code>   (target-event)="TemplateStatement"</code>
+    <div>Example:</div>
+    <span><code>&lt;button (click)="clickMe()" class="btn btn-secondary"&gt;Click Me&lt;/button&gt;</code></span><br>
+    <button (click)="clickMe()" class="btn btn-secondary">Click Me</button>
+    <p>You have clicked {{clickCount}}</p>
+    <h5> Two way Data binding</h5>
+    <hr>
+    <p class="my-0">Angular provide a way to achieve the two-way binding using the syntax [()]</p>
+    <p class="my-0">Two-way binding syntax:</p>
+    <div><code>&lt;someElement [(someProperty)]="value"&gt;&lt;/someElement&gt;</code></div>
+    <span> Example:</span>
+    <div><code>&lt;input class="form-control col-sm-4" type="text" name="firstName" [(ngModel)]="firstName"&gt;
+        <br>
+        &lt;input class="form-control col-sm-4" type="text" name="lastName" [(ngModel)]="lastName"&gt;
+    </code></div>
+    <div class="form-group col-sm-6 px-0">
+        <label class="font-weight-bold" for="firstName">FirstName</label>
+        <input class="form-control col-sm-4" type="text" name="firstName" [(ngModel)]="firstName">
+    </div>
+    <div class="form-group col-sm-6 px-0">
+        <label class="font-weight-bold" for="lastName">lastName</label>
+        <input class="form-control col-sm-4" type="text" name="lastName" [(ngModel)]="lastName">
+    </div>
+   
+</div>

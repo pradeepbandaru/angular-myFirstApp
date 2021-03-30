@@ -5,15 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { BgcolorDirective } from './directives/bgcolor.directive';
+import { BindingComponent } from './pages/binding/binding.component';
+import { WordcountPipe } from './pipes/wordcount.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    BgcolorDirective
+    BgcolorDirective,
+    BindingComponent,
+    WordcountPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

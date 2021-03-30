@@ -14,4 +14,7 @@ export class AppComponent {
   navigatetoDemo() {
     this.router.navigateByUrl('demo');
   }
+  isActive(url: string) {
+    return window.location.pathname.indexOf(url) >= 0? 'active': '';
+  }
 }
