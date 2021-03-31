@@ -1,6 +1,7 @@
 <div>
     <h3>This is demo Component</h3>
     <hr>
+    <!-- Directive Example -->
     <p><span>Directive Example:
             <code>&lt;div appBgcolor class="p-4"&gt;  This directive will add red background&lt;/div&gt;</code></span>
     </p>
@@ -15,15 +16,16 @@
 <div [appBgcolor]="color" class="p-4">
     This directive will add red background
 </div>
-
+ <!-- Service Example -->
 <div *ngIf="!!this.globalService.getUserInfo()">
-        <p>Display Service Info</p>
-        User {{userInfo| json}}
+    <p>Display Service Info</p>
+    User {{userInfo| json}}
 
 </div>
+<!-- Pipe Example -->
 <div>Example of Pipe</div>
 <div class="form-group col-sm-6 px-0">
     <label class="font-weight-bold" for="exampleInputPassword1">Enter Text</label>
     <input type="text" class="form-control" [(ngModel)]="wordCountText">
 </div>
-<div *ngIf="!!wordCountText">{{wordCountText + ' Total words:'}} {{wordCountText | wordcount}}  </div>
+<div *ngIf="!!wordCountText">{{wordCountText + ' Total words:'}} {{wordCountText | wordcount}} </div>
