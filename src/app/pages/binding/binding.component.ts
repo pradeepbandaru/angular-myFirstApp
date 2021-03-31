@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { GlobalService } from '../../services/global.service';
 @Component({
   selector: 'app-binding',
   templateUrl: './binding.component.html',
@@ -7,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private globalService: GlobalService) { }
 
   firstName = 'Pradeep';
   lastName = 'Bandaru';
   isDisabled = true;
+  className: any = 'btn-dark';
   clickCount = 0;
   ngOnInit(): void {
   }
-  clickMe() {
+  clickMe(): any {
     this.clickCount++;
+  }
+  saveUser(): any {
+    this.globalService.setUserInfo({
+      firstName: this.firstName,
+      lastName: this.lastName
+    });
+    alert('Saved Successfully to service');
   }
 }

@@ -21,15 +21,23 @@
     <div>Example: <br>
         <code>&lt;button class="btn btn-secondary" [disabled]="isDisabled">I am disabled&lt;/button&gt;</code>
     </div>
-    <button class="btn btn-secondary" [disabled]="isDisabled">I am disabled</button><br><br>
+
+
+    <button class="btn " [ngClass]="className" [disabled]="isDisabled">I am disabled</button><br><br>
+
+    
     <h5>Event Binding</h5>
     <hr>
     <p class="my-0">The Angular event binding consists of two parts</p>
     <code>   (target-event)="TemplateStatement"</code>
     <div>Example:</div>
     <span><code>&lt;button (click)="clickMe()" class="btn btn-secondary"&gt;Click Me&lt;/button&gt;</code></span><br>
-    <button (click)="clickMe()" class="btn btn-secondary">Click Me</button>
+
+    
+    <button (click)="clickCount = clickCount + 1" class="btn btn-secondary">Click Me</button>
     <p>You have clicked {{clickCount}}</p>
+
+
     <h5> Two way Data binding</h5>
     <hr>
     <p class="my-0">Angular provide a way to achieve the two-way binding using the syntax [()]</p>
@@ -48,5 +56,6 @@
         <label class="font-weight-bold" for="lastName">lastName</label>
         <input class="form-control col-sm-4" type="text" name="lastName" [(ngModel)]="lastName">
     </div>
+    <button type="button" (click)="saveUser()">Save User</button>
    
 </div>

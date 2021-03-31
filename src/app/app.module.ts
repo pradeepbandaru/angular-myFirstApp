@@ -8,21 +8,23 @@ import { BgcolorDirective } from './directives/bgcolor.directive';
 import { BindingComponent } from './pages/binding/binding.component';
 import { WordcountPipe } from './pipes/wordcount.pipe';
 import { FormsModule } from '@angular/forms';
-
+import { GlobalService } from './services/global.service';
+import { SamplepipePipe } from './pipes/samplepipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
     BgcolorDirective,
     BindingComponent,
-    WordcountPipe
+    WordcountPipe,
+    SamplepipePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
