@@ -7,7 +7,12 @@
         <li class="nav-item">
             <a class="nav-link" [ngClass]="isActive('binding')" href="/binding">Binding</a>
         </li>
-       
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="isActive('info')" href="/profile/info">Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="isActive('error')" href="/error">Error</a>
+    </li>
       </ul>
       <div class="p-3">
         <router-outlet></router-outlet>

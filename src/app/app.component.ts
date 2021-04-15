@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'myFirstAngularApp';
-  constructor(private router:Router) {
+  constructor(private router: Router) {
 
   }
-  navigatetoDemo() {
+  navigatetoDemo(): any {
     this.router.navigateByUrl('demo');
   }
-  isActive(url: string) {
+  isActive(url: string): any {
     return window.location.pathname.indexOf(url) >= 0? 'active': '';
   }
 }

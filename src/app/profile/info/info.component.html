@@ -1,0 +1,48 @@
+<h2>Profile</h2>
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th [attr.colspan]="colspan">
+                {{pageHeader}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td >First Name</td>
+            <td>{{FirstName}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{LastName}}</td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td>{{Branch}}</td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>{{Mobile}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{Gender}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{Age}}</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <div>
+      <label for="colspan">Colspan: </label>
+      <input type="number" name="colspan" max="2" id="colspan" class="form-control" [(ngModel)]="colspan">
+      <label for="colspan">Font size: </label>
+      <input type="number"  name="colspan" min="10" id="colspan" class="form-control" [(ngModel)]="fontSize">
+
+      <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <text y="20" [attr.font-size]="fontSize+'px'">Simple Text</text>
+        
+      </svg>
+  </div>
